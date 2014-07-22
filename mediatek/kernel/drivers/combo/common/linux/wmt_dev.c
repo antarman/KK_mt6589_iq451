@@ -1143,11 +1143,7 @@ WMT_unlocked_ioctl (
 		break;
 		case WMT_IOCTL_WMT_QUERY_CHIPID:
 		{
-			#if !(DELETE_HIF_SDIO_CHRDEV)
 			iRet = mtk_wcn_hif_sdio_query_chipid(1);
-			#else
-			iRet = mtk_wcn_wmt_chipid_query();
-			#endif
 		}
 		break;
 		case WMT_IOCTL_WMT_TELL_CHIPID:

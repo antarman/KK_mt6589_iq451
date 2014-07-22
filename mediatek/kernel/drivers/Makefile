@@ -70,7 +70,6 @@ obj-$(CONFIG_GATOR_DRIVER)	+= $(call all-subdirs-with-makefile,gator-driver)
 
 
 obj-y   +=  leds/
-obj-y   +=  auxadc/
 obj-y   +=  mmp/
 obj-y		+=  ram_console/
 obj-y   +=  thermal/
@@ -103,20 +102,10 @@ ifneq ($(CONFIG_MTK_COMBO),)
 		subdir-ccflags-y += -D MTK_WCN_COMBO_CHIP_SUPPORT
 	endif
 
-	ifneq ($(filter CONSYS_6572,$(MTK_COMBO_CHIP)),)
+	ifneq ($(filter CONSYS_6589,$(MTK_COMBO_CHIP)),)
 		BUILD_SOC := yes
 	endif
 
-	ifneq ($(filter CONSYS_6582,$(MTK_COMBO_CHIP)),)
-		BUILD_SOC := yes
-	endif
-	
-
-	
-	ifneq ($(filter CONSYS_6592,$(MTK_COMBO_CHIP)),)
-		BUILD_SOC := yes
-	endif
-	
 	ifeq ($(BUILD_SOC), yes)
 		obj-y   +=  conn_soc/
 	endif

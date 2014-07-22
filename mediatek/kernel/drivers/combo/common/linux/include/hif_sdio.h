@@ -300,10 +300,10 @@ extern void mtk_wcn_hif_sdio_enable_irq(
     );
 
 #define DELETE_HIF_SDIO_CHRDEV 1
-#if !(DELETE_HIF_SDIO_CHRDEV)
+//#if !(DELETE_HIF_SDIO_CHRDEV)
 INT32 mtk_wcn_hif_sdio_tell_chipid(INT32 chipId);
 INT32 mtk_wcn_hif_sdio_query_chipid(INT32 waitFlag);
-#endif
+//#endif
 
 #if HIF_SDIO_API_EXTENSION
 extern INT32 mtk_wcn_hif_sdio_f0_readb (

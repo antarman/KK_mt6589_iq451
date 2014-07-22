@@ -105,7 +105,6 @@ INT32 wmt_plat_stub_init (void)
     CMB_STUB_CB stub_cb;
     stub_cb.aif_ctrl_cb = wmt_plat_audio_ctrl;
     stub_cb.func_ctrl_cb = wmt_plat_func_ctrl;
-    stub_cb.thermal_query_cb = wmt_plat_thremal_query;
     stub_cb.size = sizeof(stub_cb);
 
     /* register to cmb_stub */
